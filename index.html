@@ -137,3 +137,373 @@ h1 span {
   max-width: 360px;
   margin: 14px auto 20px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 12px 23px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(135deg, #f48db0, #c6a8ee);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 6px 15px #e5b1d655;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.primary-button:active {
+  transform: scale(.95);
+}
+
+/* SECTIONS */
+
+section {
+  padding: 24px 0;
+  scroll-margin-top: 75px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.section-heading p {
+  margin: 0;
+  font-size: 13px;
+  opacity: .8;
+}
+
+/* PROFILE CARD */
+
+.card {
+  background: rgba(255,255,255,.88);
+  border: 1px solid #ffe0eb;
+  border-radius: 25px;
+  padding: 23px;
+  box-shadow: 0 8px 25px #d9a7bf15;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 38px;
+  border-radius: 20px;
+  background: var(--light-pink);
+}
+
+.profile-name {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.profile-tag {
+  margin: 0;
+  font-size: 12px;
+  color: #c17b9c;
+}
+
+.profile-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.tag {
+  padding: 7px 11px;
+  background: #fff0f5;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* FAVORITES */
+
+.favorites {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.favorite-card {
+  min-width: 0;
+  padding: 19px 12px;
+  text-align: center;
+  border: 1px solid #f7dce8;
+  border-radius: 23px;
+  background: rgba(255,255,255,.9);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.favorite-card:active {
+  transform: scale(.97);
+}
+
+.favorite-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  border-radius: 22px;
+  font-size: 36px;
+  background: linear-gradient(145deg, #ffe5ee, #eee3ff);
+}
+
+.favorite-card h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+}
+
+.favorite-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* LITTLE NOTE */
+
+.note {
+  text-align: center;
+  padding: 24px 17px;
+  background: linear-gradient(135deg, #ffe8f0, #f0e8ff);
+  border: 1px solid white;
+  border-radius: 25px;
+}
+
+.note .big-heart {
+  font-size: 35px;
+}
+
+.note p {
+  margin: 10px 0 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 35px 10px 30px;
+  font-size: 12px;
+  line-height: 2;
+  color: #a77e98;
+}
+
+/* FLOATING DECORATIONS */
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .55;
+  animation: float 4s ease-in-out infinite;
+}
+
+.sparkle.one {
+  top: 25%;
+  left: 4%;
+  font-size: 23px;
+}
+
+.sparkle.two {
+  top: 47%;
+  right: 5%;
+  font-size: 25px;
+  animation-delay: 1s;
+}
+
+.sparkle.three {
+  top: 75%;
+  left: 7%;
+  font-size: 18px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding-top: 65px;
+  }
+
+  .favorites {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sparkle one">✧</div>
+<div class="sparkle two">♡</div>
+<div class="sparkle three">✦</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">୨୧ nira's world</a>
+    <a href="#about" class="nav-link">get to know me ♡</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <header class="hero">
+    <div class="eyebrow">♡ A LITTLE CORNER OF THE INTERNET ♡</div>
+
+    <div class="cat-frame">
+      <div class="cat">🐈</div>
+    </div>
+
+    <h1>Welcome to<br><span>Nira's World ♡</span></h1>
+
+    <p class="subtitle">
+      little things, lovely days, and a cat-sized
+      amount of chaos. ฅ^•ﻌ•^ฅ
+    </p>
+
+    <a href="#about" class="primary-button">
+      explore my world ♡
+    </a>
+  </header>
+
+  <section id="about">
+    <div class="section-heading">
+      <h2>୨୧ About Me</h2>
+      <p>a little introduction!</p>
+    </div>
+
+    <div class="card">
+      <div class="profile-top">
+        <div class="profile-avatar">🎀</div>
+        <div>
+          <h3 class="profile-name">Hello, I'm Nira!</h3>
+          <p class="profile-tag">૮ ˶ᵔ ᵕ ᵔ˶ ა just being me</p>
+        </div>
+      </div>
+
+      <p class="profile-description">
+        Welcome to my tiny world on the internet!
+        I love cute things, cozy moments, and stories
+        that make me smile. This little website is a
+        place for all the things I adore. ♡
+      </p>
+
+      <div class="tags">
+        <span class="tag">🎀 soft girl</span>
+        <span class="tag">🐈 cat lover</span>
+        <span class="tag">☁️ daydreamer</span>
+        <span class="tag">🧸 cozy soul</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="favorites">
+    <div class="section-heading">
+      <h2>♡ My Little Favorites</h2>
+      <p>things that make my heart happy</p>
+    </div>
+
+    <div class="favorites">
+
+      <article class="favorite-card">
+        <div class="favorite-icon">📚</div>
+        <h3>Manhwa</h3>
+        <p>romance, pretty art, and fictional worlds.</p>
+      </article>
+
+      <article class="favorite-card">
+        <div class="favorite-icon">🎮</div>
+        <h3>MLBB</h3>
+        <p>cute skins, mage moments, and chaotic games.</p>
+      </article>
+
+      <article class="favorite-card">
+        <div class="favorite-icon">🐠</div>
+        <h3>Rafayel</h3>
+        <p>my favorite fishie from Love and Deepspace.</p>
+      </article>
+
+      <article class="favorite-card">
+        <div class="favorite-icon">🐈</div>
+        <h3>Cute Cats</h3>
+        <p>tiny paws and an unreasonable amount of cuteness.</p>
+      </article>
+
+      <article class="favorite-card">
+        <div class="favorite-icon">🎧</div>
+        <h3>Music</h3>
+        <p>little melodies for slow and peaceful days.</p>
+      </article>
+
+      <article class="favorite-card">
+        <div class="favorite-icon">🌷</div>
+        <h3>Pretty Things</h3>
+        <p>pink colors, ribbons, and lovely details.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="note">
+      <div class="big-heart">💌</div>
+      <h2>A Little Reminder</h2>
+      <p>
+        You don't have to bloom all at once.<br>
+        Take your time, little flower. ♡
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  made with ♡ and a little bit of cat energy<br>
+  © 2026 Nira's Little World
+  <div>૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</div>
+</footer>
+
+</body>
+</html>
